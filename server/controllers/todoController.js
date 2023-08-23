@@ -36,7 +36,6 @@ const mongoose = require('mongoose');
   * Add New Task
   */
  exports.postTask = async (req, res) => {
-  console.log(req.body)
   const newTodo = new Todo({
     task: req.body.task,
     start: req.body.start,
