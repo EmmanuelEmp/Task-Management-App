@@ -1,5 +1,5 @@
 
-const Todo = require('../models/Todo');
+const Todo = require('../models/todoModel')
 const mongoose = require('mongoose');
 
  /**
@@ -12,10 +12,10 @@ const mongoose = require('mongoose');
       title: 'Add new ToDo'
    }
    try {
-      const todos = await Todo.find({})
+      const todos = await Todo.find({ user: req.user._id})
       res.render('index', {locals, todos})
    } catch (error) {
-      console.log(error)
+      console.log(error);
    }
  }
  
@@ -39,13 +39,14 @@ const mongoose = require('mongoose');
   const newTodo = new Todo({
     task: req.body.task,
     start: req.body.start,
-    stop: req.body.stop
+    stop: req.body.stop,
+    user: req.user._id
 
   });
 
   try {
    await Todo.create(newTodo);
-   res.redirect('/')
+   res.redirect('/api/todo');
   } catch (error) {
      console.log(error);
   }
@@ -98,10 +99,10 @@ exports.updateTask = async(req, res) => {
       task: req.body.task,
       start: req.body.start,
       stop: req.body.stop,
-      updateAt: Date.now()
+      updateAt: Date.now(),
      });
      
-     res.redirect(`/edit/${req.params.id}`);
+     res.redirect(`/api/todo`);
    }
     catch (error) {
       console.log(error);
@@ -116,8 +117,8 @@ exports.updateTask = async(req, res) => {
 
 exports.deleteTask = async(req, res) => {
    try {
-      await Todo.deleteOne({_id: req.params.id})
-      res.redirect('/')
+      await Todo.deleteOne({_id: req.params.id});
+      res.redirect('/api/todo');
    } catch (error) {
       console.log(error);
    }

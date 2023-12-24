@@ -7,12 +7,16 @@
 
 </head>
 <body>
+
+  <div class="header-todo">    
+    <h2>Task Master </h2>
+</div>
     
     <div class="d-flex justify-content-between add-box flex-wrap flex-md nowrap align-items-center pt-2 pb-1 mb-2 ">
         <h1 class="h2">Add Task</h1>
-        <div class="btn-toolbar mb-2 mb-md 0">
+        <div class="btn-tool ar mb-2 mb-md 0">
           <div class="btn-group me-2">
-            <a href="/add" class="btn add-task btn-primary">+</a>
+            <a href="/api/todo/add" class="btn add-task btn-primary">+</a>
           </div>
         </div>
     </div>
@@ -36,21 +40,18 @@
         <% todos.forEach(element => { %>
           <tr class="align-middle ">
             <td><%= element.task %></td>
-            
-            <!-- <td></%= element.start %></td>
-             <td></%= element.stop %></td> -->
             <td class="text-end">
   
               <div class="d-flex flex-row justify-content-end gap-2 list-size">
   
-                <a href="/view/<%= element._id %>" type="button" class="btn btn-primary btn-small btn-size">
+                <a href="/api/todo/view/<%= element._id %>" type="button" class="btn btn-primary btn-small btn-size">
                   <i class="bi bi-eye"></i>
                 </a>
   
-                <a href="/edit/<%= element._id %>" type="button" class="btn btn-warning btn-small btn-size">
+                <a href="/api/todo/edit/<%= element._id %>" type="button" class="btn btn-warning btn-small btn-size">
                   <i class="bi bi-pencil"></i>
                 </a>
-                <form action="/edit/<%= element._id %>?_method=DELETE" method="POST" class="position-relative">
+                <form action="/api/todo/edit/<%= element._id %>?_method=DELETE" method="POST" class="position-relative">
                   <button type="submit" class="btn btn-danger danger btn-small btn-size">
                     <i class="bi bi-x"></i>
                   </button>
@@ -64,9 +65,6 @@
     </table>
   </div>
 
-
-
-  
 
 </body>
 </html>

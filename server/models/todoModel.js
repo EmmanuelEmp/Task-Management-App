@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const User = require('./userModel')
 
 const Schema = mongoose.Schema;
 
@@ -14,6 +15,11 @@ const TodoSchema = new Schema({
   stop: {
     type: String,
     required: true
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
   },
   createdAt: {
     type: Date,
