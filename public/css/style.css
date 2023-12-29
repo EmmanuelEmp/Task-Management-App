@@ -16,9 +16,14 @@ h5 a{
 }
 
 p {
+    font-family: 'poppins';
+}
+.item{
     font-family: 'Arial', sans-serif;
 }
-
+/* .item a{
+    text-decoration: none;
+} */
 
 .action-small th{
     padding-top: 13px;
@@ -80,7 +85,7 @@ p {
 .h6{
     font-style: italic;
     padding: 0 20px;
-    font-size: small;
+    font-size:10px;
 }
 .icon{
     
@@ -141,6 +146,7 @@ p {
     padding-bottom: 2px;
     padding-top: 2px;
     font-family: 'futura';
+    font-size: medium;
 }
 .signup{
     text-align: center;
@@ -163,7 +169,7 @@ p {
 .logo{
     display: inline-block;
     background-color: #3F8BFE;
-    border: 2px solid #1da1f2;
+    border: 2px solid #3F8BFE;
     border-radius: 50%;
     width: 40px;
     height: 40px;

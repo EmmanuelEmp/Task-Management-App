@@ -4,8 +4,8 @@
       <div class="col">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/api/todo">To Do List</a></li>
-            <li class="breadcrumb-item active">Edit Task</li>
+            <li class="breadcrumb-item item" ><a href="/api/todo">Task List</a></li>
+            <li class="breadcrumb-item active item">Edit Task</li>
           </ol>
         </nav>
       </div>
@@ -18,19 +18,19 @@
     <div class="row form-group mb-4">
       <div class="col">
         <label for="task">Task</label>
-        <input type="text" class="form-control" id="task" name="task" value="" placeholder="Add a new task here" required>
+        <input type="text" class="form-control item" id="task" name="task" value="" placeholder="Add a new task here" required>
       </div>
     
       <div class="col">
         <label for="task">Start Task</label>
-        <input type="text" class="form-control" id="start" name="start" value="" placeholder="Begin task" required>
+        <input type="text" class="form-control item" id="start" name="start" value="" placeholder="Begin task" required>
       </div>
     </div>
     <div class="col"> 
-      <label for="task">End Task</label>
-      <input type="text" class="form-control" id="stop" name="stop" value="" placeholder="Completion time" required>
+      <label for="task" class="item">End Task</label>
+      <input type="text" class="form-control item" id="stop" name="stop" value="" placeholder="Completion time" required>
     </div>
   </div>
     <div class="form-group mb-4">
-      <button type="submit" class="btn btn-primary">Add Task</button>
+      <button type="submit" class="btn btn-primary item">Add Task</button>
     </div>

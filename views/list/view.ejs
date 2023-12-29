@@ -4,8 +4,8 @@
       <div class="col">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/api/todo">To Do List</a></li>
-            <li class="breadcrumb-item active"><%= todo.task  %></li>
+            <li class="breadcrumb-item item"><a href="/api/todo">Task List</a></li>
+            <li class="breadcrumb-item active item"><%= todo.task  %></li>
           </ol>
         </nav>
       </div>   
@@ -17,28 +17,28 @@
     <li class="list-group-item"> 
       <div class="row">
         <div class="col" style="max-width: 140px"> <b>Task:</b></div>
-        <div class="col"><%= todo.task %> <%= todo.task %></div>
+        <div class="col item"><%= todo.task %> <%= todo.task %></div>
       </div>
     </li>
   
     <li class="list-group-item"> 
       <div class="row">
-        <div class="col" style="max-width: 140px"> <b>Start:</b></div>
-        <div class="col"><%= todo.start %></div>
+        <div class="col item" style="max-width: 140px"> <b>Start:</b></div>
+        <div class="col item"><%= todo.start %></div>
       </div>
     </li>
   
     <li class="list-group-item"> 
       <div class="row">
-        <div class="col" style="max-width: 140px"> <b>Stop:</b></div>
-        <div class="col"><%= todo.stop %></div>
+        <div class="col item" style="max-width: 140px"> <b>Stop:</b></div>
+        <div class="col item"><%= todo.stop %></div>
       </div>
     </li>
   
     <li class="list-group-item"> 
       <div class="row">
-        <div class="col" style="max-width: 140px"> <b>Date Created:</b></div>
-        <div class="col"><%= todo.createdAt %></div>
+        <div class="col item" style="max-width: 140px"> <b>Date Created:</b></div>
+        <div class="col item"><%= todo.createdAt %></div>
       </div>
     </li>
   </ul>
